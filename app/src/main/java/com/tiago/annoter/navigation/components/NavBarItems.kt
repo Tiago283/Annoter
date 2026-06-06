@@ -1,0 +1,14 @@
+package com.tiago.annoter.navigation.components
+
+import com.tiago.annoter.R
+import com.tiago.annoter.navigation.Route
+
+data class NavBarItem(
+    val icon: Int,
+    val title: Int
+)
+
+val TOP_LEVEL_DESTINATIONS = mapOf(
+    Route.NoteList to NavBarItem(icon = R.drawable.ic_note, title = R.string.notes),
+    Route.TaskList to NavBarItem(icon = R.drawable.ic_confirm, title = R.string.tasks)
+)

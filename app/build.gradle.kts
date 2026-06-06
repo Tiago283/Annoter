@@ -17,7 +17,6 @@ android {
     defaultConfig {
         applicationId = "com.tiago.annoter"
         minSdk = 24
-        //noinspection OldTargetApi
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
