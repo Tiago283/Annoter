@@ -1,7 +1,7 @@
 package com.tiago.annoter.navigation
 
 import androidx.navigation3.runtime.NavKey
-import com.tiago.annoter.note.domain.models.NoteModel
+import com.tiago.annoter.features.notes.domain.models.NoteModel
 import kotlinx.serialization.Serializable
 
 interface Route : NavKey {

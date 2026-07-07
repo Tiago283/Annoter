@@ -12,14 +12,14 @@ import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.runtime.rememberSaveableStateHolderNavEntryDecorator
 import androidx.navigation3.ui.NavDisplay
-import com.tiago.annoter.note.domain.models.NoteModel
-import com.tiago.annoter.core.ui.components.AnnoterAppBar
-import com.tiago.annoter.note.ui.list.NoteListScreen
-import com.tiago.annoter.note.components.CreateNoteFab
-import com.tiago.annoter.task.ui.list.TaskListScreen
+import com.tiago.annoter.core.designsystem.components.AnnoterAppBar
+import com.tiago.annoter.features.notes.components.CreateNoteFab
+import com.tiago.annoter.features.notes.domain.models.NoteModel
+import com.tiago.annoter.features.notes.ui.details.NoteDetailScreen
+import com.tiago.annoter.features.notes.ui.list.NoteListScreen
+import com.tiago.annoter.features.tasks.ui.list.TaskListScreen
 import com.tiago.annoter.navigation.components.AnnoterNavigationBar
 import com.tiago.annoter.navigation.components.TOP_LEVEL_DESTINATIONS
-import com.tiago.annoter.note.ui.details.NoteDetailScreen
 import kotlin.collections.get
 
 @Composable
@@ -73,8 +73,8 @@ fun NavigationRoot(modifier: Modifier = Modifier) {
                 entry<Route.TaskList> { TaskListScreen() }
                 entry<Route.NoteList> {
                     NoteListScreen(
-                        onNoteClicked = {
-                            backStack.add(Route.NoteDetail(it))
+                        onNoteClicked = { note ->
+                            backStack.add(Route.NoteDetail(note))
                         }
                     )
                 }

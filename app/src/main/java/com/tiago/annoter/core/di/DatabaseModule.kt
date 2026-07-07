@@ -3,8 +3,8 @@ package com.tiago.annoter.core.di
 import android.content.Context
 import androidx.room.Room
 import com.tiago.annoter.core.data.AppDatabase
-import com.tiago.annoter.note.data.NoteDao
-import com.tiago.annoter.task.data.TaskDao
+import com.tiago.annoter.features.notes.data.NoteDao
+import com.tiago.annoter.features.tasks.data.TaskDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
